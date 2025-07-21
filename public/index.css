@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #05070f;
+  color: #edeff7;
+  font-family: "Sansation", sans-serif;
+}
+
+/* == Typography */
+p,
+input,
+label {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* ==================== */
+/* == Note Container == */
+/* ==================== */
+.todo-container {
+  background-color: #edeff7;
+  color: #05070f;
+  border: 1px solid #edeff7;
+  border-radius: 5px;
+  box-sizing: border-box;
+  width: 50%;
+  margin: 50px auto;
+  padding: 10px 50px;
+}
+
+.title {
+  color: #243570;
+  text-align: center;
+}
+
+/* == Form == */
+.add-todo form {
+  display: flex;
+}
+
+form input {
+  width: 100%;
+  padding: 12px 10px;
+  border: 1px solid #edeff7;
+
+  cursor: text;
+}
+
+form button {
+  width: 15%;
+  font-size: 1rem;
+  border: 1px solid #edeff7;
+  border-radius: 5px;
+  color: #edeff7;
+  background-color: #3f5dca;
+  cursor: pointer;
+}
+
+/* == Confirmation Text == */
+.confirmation-container p {
+  display: none;
+  text-align: center;
+}
+
+/* == List == */
+.task-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #edeff7;
+  color: #080a12;
+  border: 1px solid #8599db;
+  border-radius: 5px;
+  padding: 0 0 0 10px;
+  margin: 10px 0px;
+}
+
+.task-container button {
+  background-color: #8599db;
+  border: 1px solid #8599db;
+  border-radius: 4px;
+  cursor: pointer;
+}
