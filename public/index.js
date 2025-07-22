@@ -1,6 +1,6 @@
 export async function getData() {
   try {
-    const resposne = await fetch("/api");
+    const resposne = await fetch("/api/lists");
     const data = await resposne.json();
     renderToDoList(data);
   }
