@@ -1,7 +1,8 @@
 import express from 'express'
-import { getList, postList } from '../controller/listControllers.js';
+import { getList, postList, deleteList } from '../controller/listControllers.js';
 
 export const listRoute = express.Router();
 
 listRoute.get('/', getList);
 listRoute.post('/postList', postList);
+listRoute.delete('/postList/:id', deleteList)

@@ -1,19 +1,18 @@
-import { getDBConnection } from "./database/database.js";
-import { list } from "./data.js";
+import { getDBConnection } from "./database.js";
 
-async function insertData() {
+export async function insertData(newList) {
   const db = await getDBConnection();
 
   try {
     await db.exec("BEGIN TRANSACTION")
 
-    for (const { description } of list) {
-      await db.run(
+    const { description } = newList;
+    await db.run(
         /* sql */`
         INSERT INTO lists (description) VALUES (?)
         `, [description]
-      )
-    }
+    )
+
     console.log('Insert Data Complete');
     await db.exec("COMMIT")
   }
@@ -28,5 +27,3 @@ async function insertData() {
     console.log("Database conncetion closed")
   }
 }
-
-insertData();

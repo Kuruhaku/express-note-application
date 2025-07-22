@@ -1,4 +1,4 @@
-import { getDBConnection } from "./database/database.js";
+import { getDBConnection } from "./database.js";
 
 async function createTable() {
   const db = await getDBConnection();
